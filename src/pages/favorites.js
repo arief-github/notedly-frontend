@@ -8,7 +8,7 @@ const Favorites = () => {
 	return (
 		<div>
 			<h1>Notedly</h1>
-			<p>These are my notes</p>
+			<p>These are my favorites notes</p>
 		</div>
 	)
 }
