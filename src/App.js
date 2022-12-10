@@ -5,11 +5,12 @@ import GlobalStyles from './components/GlobalStyles';
 
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
+const uri = process.env.REACT_APP_BASE_URL;
 const cache = new InMemoryCache();
 
 // configure Apollo Client
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/api',
+  uri,
   cache,
   connectToDevTools: true
 })
