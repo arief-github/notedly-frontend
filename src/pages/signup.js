@@ -44,11 +44,14 @@ const SignUp = (props) => {
         document.title = 'Sign Up - Notedly';
     });
 
+    const client = useApolloClient();
+
     const [signUp, { loading, error }] = useMutation(SIGNUP_USER, {
         onCompleted: data => {
             // console.log the JSON Web Token when the mutation is complete
-            console.log(data.signUp);
+            // console.log(data.signUp);
             localStorage.setItem('token', data.signUp);
+            client.cache.writeData({ data: { isLoggedIn: true } })
             props.history.push('/');
         }
     });
