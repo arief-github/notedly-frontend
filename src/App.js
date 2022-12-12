@@ -33,8 +33,8 @@ const data = {
 
 //write the cache data on initial load
 
-//here's the problem
 cache.writeData({ data });
+client.onResetStore(() => cache.writeData({ data }));
 
 function App() {
     return (
