@@ -7,6 +7,7 @@ import Favorites from './favorites';
 import NotePage from './note';
 import SignUp from './signup';
 import SignIn from './signin';
+import NewNote from './newNote';
 
 import Layout from '../components/Layout';
 
@@ -23,6 +24,7 @@ const Pages = (props) => {
 						<Route exact path="/" component={Home}/>
 						<PrivateRoute path="/mynotes" component={MyNotes}/>
 						<PrivateRoute path="/favorites" component={Favorites}/>
+						<PrivateRoute path="/new" component={NewNote} />
 						<Route path="/mynotes" component={MyNotes}/>
 						<Route path="/favorites" component={Favorites}/>	
 						<Route path="/note/:id" component={NotePage}/>
