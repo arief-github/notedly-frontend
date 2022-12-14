@@ -25,8 +25,6 @@ const Pages = (props) => {
 						<PrivateRoute path="/mynotes" component={MyNotes}/>
 						<PrivateRoute path="/favorites" component={Favorites}/>
 						<PrivateRoute path="/new" component={NewNote} />
-						<Route path="/mynotes" component={MyNotes}/>
-						<Route path="/favorites" component={Favorites}/>	
 						<Route path="/note/:id" component={NotePage}/>
 						<Route path="/signup" component={SignUp}/>
 						<Route path="/signin" component={SignIn}/>
