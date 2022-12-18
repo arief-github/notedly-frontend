@@ -5,11 +5,7 @@ import styled from 'styled-components';
 import Button from '../components/Button';
 import UserForm from '../components/UserForm';
 
-const SIGNUP_USER = gql `
-  mutation signUp($email: String!, $username: String!, $password: String!) {
-    signUp(email: $email, username: $username, password: $password)
-  }
-`;
+import { SIGNUP_USER } from '../gql/mutation';
 
 const SignUp = (props) => {
     const [values, setValues] = useState();
